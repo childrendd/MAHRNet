@@ -8,8 +8,8 @@
 # Introduction
 * If you want to use our code, you must have the following preparation under the PyTorch framework: see requirement.txt for details. 
 * Code Guidance: Download the dataset in the above link, put the training images and labels into "VOCdevkit/VOC2007/JPEGImages" and "VOCdevkit/VOC2007/SegmentationClass", then run Data_Split.py file to divide the data set can be seen in the “VOCdevkit/VOC2007/ImageSets/Segmentation out of the training and validation of the document, then you can run the train.py file for training, training is complete run get_miou.py After training, you can run get_miou.py to test the file.
-* Running the get_miou.py file generates predictions with pixel values of 0 and 1.  Due to the low pixel values, the resulting PNG format image is relatively poorly visualized, so it is normal for the predicted image to look almost completely black. We can run the adjust.py file to binarize the predicted image.
-* When we train with a dataset other than the one described above, we need to first convert the dataset to the format required by the code, and in particular, we need to convert the masks to the correct format via the bit.py file before we train them.
+* Running the get_miou.py file will generate prediction results with pixel values of 0 and 1. Since these pixel values are relatively small, the prediction images appear with poor contrast when saved in PNG format (which is why they look almost entirely black). This is normal. To address this, you can run the adjust.py file to perform binarization processing on the prediction images.
+* When training with datasets outside of the aforementioned ones, you will first need to convert the dataset into the format required by the network. Specifically, before training, you must use the bit.py file to transform the masks into the correct format.
 
 # Reference
 * Li, H., Ren, Z., Zhu, G. et al. Enhancing medical image segmentation with MA-UNet: a multi-scale attention framework. The Visual Computer (2025).
