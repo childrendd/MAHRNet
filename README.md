@@ -11,3 +11,5 @@
 * The get_miou.py generates a grayscale map, because the value is relatively small, according to the png form of the map is no display effect, so it is normal to see a nearly all-black map. We can run the adjust.py file to adjust the pixel values of the image after the get_miou.py file is run.
 * When we use datasets other than those mentioned above for training, we need to change the dataset to the format required by the code first, and in particular, we need to change the labels to an 8bit format before we can train them. We can use the bit.py file to convert the tags to the desired format.
 
+# Reference
+* Li, H., Ren, Z., Zhu, G. et al. Enhancing medical image segmentation with MA-UNet: a multi-scale attention framework. The Visual Computer (2025).
